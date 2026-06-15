@@ -39,13 +39,13 @@ img {
 
 .product-grid {
   position: absolute;
-  top: 26%;
-  left: 50%;
-  width: 72%;
+  top: 29%;
+  left: 42%;
+  width: 64%;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(4, minmax(0, 1fr));
   row-gap: 31px;
-  column-gap: 4px;
+  column-gap: 8px;
   transform: translateX(-50%);
 }
 

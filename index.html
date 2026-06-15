@@ -3,13 +3,13 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Empty Vending Machine</title>
+  <title>Vending Machine</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <main class="page">
     <div class="machine">
-      <img src="images/empty vending machine.png" alt="Empty vending machine">
+      <img src="images/vending machine.png" alt="Vending machine">
       <div class="product-grid" aria-label="Product grid"></div>
       <img class="shiba" src="images/shiba inu.png" alt="Shiba Inu">
     </div>
@@ -18,7 +18,7 @@
   <script>
     const productGrid = document.querySelector('.product-grid');
 
-    for (let i = 0; i < 9; i += 1) {
+    for (let i = 0; i < 12; i += 1) {
       const product = document.createElement('button');
       product.className = 'product';
       product.type = 'button';
