@@ -4,77 +4,14 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Empty Vending Machine</title>
-  <style>
-    body {
-      margin: 0;
-      min-height: 100vh;
-      display: grid;
-      place-items: center;
-      background: #f4f4f4;
-      font-family: Arial, sans-serif;
-    }
-
-    .page {
-      width: 100%;
-      max-width: 550px;
-      min-height: 100vh;
-      background: green;
-      display: grid;
-      place-items: center;
-    }
-
-    .machine {
-      position: relative;
-      max-width: 100%;
-    }
-
-    img {
-      max-width: 100%;
-      max-height: 100vh;
-      display: block;
-    }
-
-    .product-grid {
-      position: absolute;
-      top: 26%;
-      left: 50%;
-      width: 72%;
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      row-gap: 38px;
-      column-gap: 4px;
-      transform: translateX(-50%);
-    }
-
-    .product {
-      aspect-ratio: 1;
-      border: 1px solid #222;
-      border-radius: 4px;
-      background: #fff;
-      color: #222;
-      cursor: pointer;
-      font-size: clamp(6px, 1.8vw, 10px);
-      padding: 0;
-    }
-
-    .product.falling {
-      pointer-events: none;
-      animation: fall 800ms ease-in forwards;
-    }
-
-    @keyframes fall {
-      to {
-        transform: translateY(360px) rotate(25deg);
-        opacity: 0;
-      }
-    }
-  </style>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <main class="page">
     <div class="machine">
-      <img src="empty vending machine.png" alt="Empty vending machine">
+      <img src="images/empty vending machine.png" alt="Empty vending machine">
       <div class="product-grid" aria-label="Product grid"></div>
+      <img class="shiba" src="images/shiba inu.png" alt="Shiba Inu">
     </div>
   </main>
 
