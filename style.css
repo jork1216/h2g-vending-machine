@@ -11,7 +11,7 @@ body {
   width: 100%;
   max-width: 550px;
   min-height: 100vh;
-  background: green;
+  background: url("images/park.png") center top / 100% auto no-repeat;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -21,7 +21,6 @@ body {
   position: relative;
   width: 100%;
   max-width: 85%;
-  
 }
 
 img {
