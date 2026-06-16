@@ -63,12 +63,12 @@ img {
 
 .product-grid {
   position: absolute;
-  top: 20%;
+  top: 19%;
   left: 41.5%;
   width: 60%;
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
-  row-gap: 35px;
+  row-gap: 30px;
   column-gap: 15px;
   transform: translateX(-50%);
   z-index: 2;
