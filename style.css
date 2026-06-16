@@ -88,10 +88,16 @@ img {
   border: 0;
   background: transparent;
   cursor: pointer;
+  outline: none;
   padding: 0;
   display: grid;
   place-items: end center;
   overflow: visible;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.product:focus {
+  outline: none;
 }
 
 .product-image {
