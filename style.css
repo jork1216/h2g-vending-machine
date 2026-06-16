@@ -17,10 +17,18 @@ body {
   align-items: center;
 }
 
+.title-image {
+  width: 100%;
+  margin-top: 24px;
+  margin-bottom: 8px;
+  transform: translateX(2.5%);
+}
+
 .machine {
   position: relative;
   width: 100%;
   max-width: 85%;
+  pointer-events: none;
 }
 
 img {
