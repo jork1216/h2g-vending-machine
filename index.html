@@ -11,9 +11,9 @@
     <div class="machine">
       <img class="vending-machine" src="images/empty vending machine.png" alt="Vending machine">
       <div class="shelves" aria-hidden="true">
-        <img class="shelf" src="images/shelf.png" alt="">
-        <img class="shelf" src="images/shelf.png" alt="">
-        <img class="shelf" src="images/shelf.png" alt="">
+        <img class="shelf" src="images/shelf1.png" alt="">
+        <img class="shelf" src="images/shelf1.png" alt="">
+        <img class="shelf" src="images/shelf1.png" alt="">
       </div>
       <div class="product-grid" aria-label="Product grid"></div>
       <img class="shiba" src="images/shiba inu.png" alt="Shiba Inu">
@@ -22,12 +22,26 @@
 
   <script>
     const productGrid = document.querySelector('.product-grid');
+    const products = [
+      { name: 'Toilet roll', image: 'products/toilet roll.png' },
+      { name: 'Shampoo', image: 'products/shampoo.png' },
+      { name: 'Dove soap', image: 'products/dove soap.png' },
+      { name: 'Colgate', image: 'products/colgate.png' }
+    ];
 
     for (let i = 0; i < 12; i += 1) {
+      const item = products[i % products.length];
       const product = document.createElement('button');
       product.className = 'product';
       product.type = 'button';
-      product.textContent = 'Product';
+      product.setAttribute('aria-label', item.name);
+
+      const image = document.createElement('img');
+      image.className = 'product-image';
+      image.src = item.image;
+      image.alt = '';
+      product.append(image);
+
       product.addEventListener('click', () => {
         product.classList.add('falling');
       });
