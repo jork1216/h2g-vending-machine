@@ -68,7 +68,7 @@ img {
   width: 60%;
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
-  row-gap: 30px;
+  row-gap: 28px;
   column-gap: 15px;
   transform: translateX(-50%);
   z-index: 2;
