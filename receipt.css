@@ -73,50 +73,27 @@ body {
   height: 58px;
   position: relative;
   flex: 0 0 66px;
-  border-right: 1px solid #222;
   padding-right: 18px;
+  display: grid;
+  place-items: center;
 }
 
-.receipt-store-awning {
-  position: absolute;
-  top: 4px;
-  left: 6px;
-  width: 46px;
-  height: 20px;
-  border: 5px solid #050505;
-  border-bottom: 0;
-  transform: perspective(40px) rotateX(16deg);
-}
-
-.receipt-store-awning::before {
+.receipt-store-icon::after {
   content: "";
   position: absolute;
-  inset: 0;
-  background: repeating-linear-gradient(
-    90deg,
-    #050505 0 9px,
-    #fff 9px 18px
-  );
+  top: 50%;
+  right: 0;
+  width: 2px;
+  height: 78px;
+  background: #000;
+  transform: translateY(-50%);
 }
 
-.receipt-store-building {
-  position: absolute;
-  left: 13px;
-  bottom: 0;
-  width: 36px;
-  height: 32px;
-  border: 5px solid #050505;
-  border-top-width: 4px;
-}
-
-.receipt-store-building::before {
-  content: "";
-  position: absolute;
-  right: 5px;
-  bottom: 0;
-  width: 10px;
-  height: 19px;
-  background: #050505;
+.receipt-store-logo {
+  width: 54px;
+  height: 54px;
+  display: block;
+  object-fit: contain;
 }
 
 .receipt-info {
@@ -280,12 +257,9 @@ body {
     padding-right: 14px;
   }
 
-  .receipt-store-awning {
-    width: 38px;
-  }
-
-  .receipt-store-building {
-    width: 30px;
+  .receipt-store-logo {
+    width: 44px;
+    height: 44px;
   }
 
   .receipt-info div {
