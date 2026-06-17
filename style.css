@@ -7,15 +7,31 @@ body {
   font-family: Arial, sans-serif;
 }
 
-.page {
+.main {
   width: 100%;
   max-width: 550px;
   min-height: 100vh;
-  background: url("images/park.png") center top / 100% auto no-repeat;
+  
+}
+
+.vendo-page {
+  width: 100%;
+  min-height: 100vh;
+  height: auto;
+  background: url("images/park.png") center center / cover no-repeat;
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding-bottom: 60px;
   overflow: hidden;
+}
+
+.receipt-frame {
+  width: 100%;
+  height: 1320px;
+  border: 0;
+  display: block;
+  background: #000;
 }
 
 .title-image {

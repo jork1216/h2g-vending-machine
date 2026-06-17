@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cash Receipt</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="receipt.css">
+</head>
+<body>
+  <section class="receipt">
+    <article class="receipt-paper" aria-label="Cash receipt">
+      <h2 class="receipt-title">CASH RECEIPT</h2>
+
+      <div class="receipt-rule"></div>
+
+      <div class="receipt-shop">
+        <div class="receipt-store-icon" aria-hidden="true">
+          <span class="receipt-store-awning"></span>
+          <span class="receipt-store-building"></span>
+        </div>
+
+        <dl class="receipt-info">
+          <div>
+            <dt>Shop Name:</dt>
+            <dd>H2G Transient Store</dd>
+          </div>
+          <div>
+            <dt>Shop Address:</dt>
+            <dd>Taguig City, Philippines</dd>
+          </div>
+          <div>
+            <dt>Date:</dt>
+            <dd>MM/DD/YYYY</dd>
+          </div>
+          <div>
+            <dt>Manager:</dt>
+            <dd>Maks Miler</dd>
+          </div>
+        </dl>
+      </div>
+
+      <div class="receipt-rule"></div>
+
+      <div class="receipt-items">
+        <div class="receipt-items-heading">
+          <span>DESCRIPTION</span>
+          <span>PRICE</span>
+        </div>
+
+        <ul class="receipt-lines">
+          <li><span>Lorem ipsum</span><span>$4.25</span></li>
+          <li><span>Ipsum dolor sit</span><span>$1.10</span></li>
+        </ul>
+      </div>
+
+      <div class="receipt-dashed-rule"></div>
+
+      <div class="receipt-summary">
+        <div><span>SUBTOTAL</span><span>$109.44</span></div>
+        <div><span>TAX (15%)</span><span>$15.55</span></div>
+      </div>
+
+      <div class="receipt-rule"></div>
+
+      <div class="receipt-total">
+        <span>TOTAL</span>
+        <span>$124.99</span>
+      </div>
+
+      <div class="receipt-thanks">
+        <h3>THANK YOU</h3>
+        <p>for shopping!</p>
+      </div>
+
+      <div class="receipt-barcode" aria-hidden="true"></div>
+      <p class="receipt-code">#854926593559346#</p>
+    </article>
+  </section>
+
+  <script src="receipt.js"></script>
+</body>
+</html>

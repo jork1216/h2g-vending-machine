@@ -1,0 +1,287 @@
+html,
+body {
+  margin: 0;
+ 
+}
+
+.receipt {
+  width: 100%;
+  background: #fff;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  padding: 70px 0;
+}
+
+.receipt-paper {
+  width: 90%;
+  position: relative;
+  box-sizing: border-box;
+  background: #fff;
+  color: #050505;
+  padding: 46px clamp(20px, 6vw, 28px) 34px;
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.2;
+  box-shadow: 0 18px 35px rgba(0, 0, 0, 0.45);
+}
+
+.receipt-paper::before,
+.receipt-paper::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 14px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='14' viewBox='0 0 20 14'%3E%3Cpolygon points='0,14 10,0 20,14' fill='white'/%3E%3C/svg%3E");
+  background-repeat: repeat-x;
+  background-size: 20px 14px;
+}
+
+.receipt-paper::before {
+  top: -13px;
+}
+
+.receipt-paper::after {
+  bottom: -13px;
+  transform: rotate(180deg);
+}
+
+.receipt-title {
+  margin: 0 0 26px;
+  text-align: center;
+  font-family: "Bebas Neue", Arial, Helvetica, sans-serif;
+  font-size: clamp(30px, 8vw, 46px);
+  font-weight: 600;
+  line-height: 1;
+}
+
+.receipt-rule {
+  border-top: 2px solid #111;
+  margin: 0;
+}
+
+.receipt-shop {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 18px 0;
+}
+
+.receipt-store-icon {
+  width: 66px;
+  height: 58px;
+  position: relative;
+  flex: 0 0 66px;
+  border-right: 1px solid #222;
+  padding-right: 18px;
+}
+
+.receipt-store-awning {
+  position: absolute;
+  top: 4px;
+  left: 6px;
+  width: 46px;
+  height: 20px;
+  border: 5px solid #050505;
+  border-bottom: 0;
+  transform: perspective(40px) rotateX(16deg);
+}
+
+.receipt-store-awning::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: repeating-linear-gradient(
+    90deg,
+    #050505 0 9px,
+    #fff 9px 18px
+  );
+}
+
+.receipt-store-building {
+  position: absolute;
+  left: 13px;
+  bottom: 0;
+  width: 36px;
+  height: 32px;
+  border: 5px solid #050505;
+  border-top-width: 4px;
+}
+
+.receipt-store-building::before {
+  content: "";
+  position: absolute;
+  right: 5px;
+  bottom: 0;
+  width: 10px;
+  height: 19px;
+  background: #050505;
+}
+
+.receipt-info {
+  margin: 0;
+  flex: 1;
+  display: grid;
+  gap: 7px;
+  font-size: clamp(12px, 2.8vw, 15px);
+}
+
+.receipt-info div {
+  display: grid;
+  grid-template-columns: 1fr 1.45fr;
+  gap: 12px;
+}
+
+.receipt-info dt,
+.receipt-info dd {
+  margin: 0;
+}
+
+.receipt-items {
+  margin-top: 20px;
+}
+
+.receipt-items-heading {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  padding-bottom: 11px;
+  border-bottom: 2px solid #111;
+  font-family: "Bebas Neue", Arial, Helvetica, sans-serif;
+  font-weight: 600;
+  font-size: clamp(18px, 4.6vw, 25px);
+}
+
+.receipt-lines {
+  list-style: none;
+  margin: 16px 0 0;
+  padding: 0;
+  display: grid;
+  gap: 8px;
+  font-size: clamp(13px, 3.5vw, 18px);
+}
+
+.receipt-lines li,
+.receipt-summary div,
+.receipt-total {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.receipt-lines li span:first-child {
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+
+.receipt-lines li span:last-child,
+.receipt-summary div span:last-child,
+.receipt-total span:last-child {
+  flex: 0 0 auto;
+}
+
+.receipt-dashed-rule {
+  margin: 20px 0 14px;
+  border-top: 2px dashed #999;
+}
+
+.receipt-summary {
+  display: grid;
+  gap: 8px;
+  font-size: clamp(14px, 3.5vw, 18px);
+}
+
+.receipt-total {
+  align-items: baseline;
+  margin-top: 18px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 400;
+  font-size: clamp(24px, 6.4vw, 34px);
+}
+
+.receipt-total span:last-child {
+  font-size: clamp(28px, 7vw, 38px);
+}
+
+.receipt-thanks {
+  margin-top: 36px;
+  text-align: center;
+}
+
+.receipt-thanks h3 {
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: clamp(12px, 4vw, 24px);
+  font-family: "Bebas Neue", Arial, Helvetica, sans-serif;
+  font-size: clamp(22px, 5.5vw, 30px);
+  font-weight: 400;
+}
+
+.receipt-thanks h3::before,
+.receipt-thanks h3::after {
+  content: "";
+  width: clamp(28px, 8vw, 42px);
+  border-top: 2px solid #111;
+}
+
+.receipt-thanks p {
+  margin: 4px 0 0;
+  font-family: "Playlist Script", "Brush Script MT", "Segoe Script", cursive;
+  font-size: clamp(24px, 6vw, 36px);
+  line-height: 1;
+}
+
+.receipt-barcode {
+  height: 43px;
+  margin: 26px 14px 6px;
+  background: repeating-linear-gradient(
+    90deg,
+    #050505 0 2px,
+    transparent 2px 5px,
+    #050505 5px 6px,
+    transparent 6px 8px,
+    #050505 8px 12px,
+    transparent 12px 15px,
+    #050505 15px 17px,
+    transparent 17px 20px,
+    #050505 20px 23px,
+    transparent 23px 26px
+  );
+}
+
+.receipt-code {
+  margin: 0;
+  text-align: center;
+  font-size: clamp(16px, 4vw, 22px);
+}
+
+@media (max-width: 420px) {
+  .receipt {
+    padding: 54px 0;
+  }
+
+  .receipt-shop {
+    gap: 14px;
+  }
+
+  .receipt-store-icon {
+    flex-basis: 54px;
+    width: 54px;
+    padding-right: 14px;
+  }
+
+  .receipt-store-awning {
+    width: 38px;
+  }
+
+  .receipt-store-building {
+    width: 30px;
+  }
+
+  .receipt-info div {
+    grid-template-columns: 1fr;
+    gap: 1px;
+  }
+}
