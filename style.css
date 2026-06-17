@@ -7,11 +7,16 @@ body {
   font-family: Arial, sans-serif;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 .main {
   width: 100%;
   max-width: 550px;
   min-height: 100vh;
-  
+  box-sizing: border-box;
+  padding-bottom: calc(82px + env(safe-area-inset-bottom));
 }
 
 .vendo-page {
@@ -31,6 +36,53 @@ body {
   border: 0;
   display: block;
   background: #fff;
+}
+
+.bottom-nav {
+  position: fixed;
+  left: 50%;
+  bottom: calc(12px + env(safe-area-inset-bottom));
+  width: min(calc(100% - 24px), 500px);
+  box-sizing: border-box;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 6px;
+  padding: 7px;
+  background: rgba(255, 255, 255, 0.82);
+  border: 1px solid rgba(17, 17, 17, 0.12);
+  border-radius: 999px;
+  box-shadow: 0 16px 45px rgba(0, 0, 0, 0.22);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  transform: translateX(-50%);
+  z-index: 20;
+}
+
+.bottom-nav a {
+  min-height: 46px;
+  box-sizing: border-box;
+  display: grid;
+  place-items: center;
+  color: #1f2933;
+  border: 1px solid transparent;
+  border-radius: 999px;
+  background: transparent;
+  font-size: 13px;
+  font-weight: 700;
+  text-decoration: none;
+  text-align: center;
+  transition: background 160ms ease, color 160ms ease, box-shadow 160ms ease;
+}
+
+.bottom-nav a:hover {
+  background: #111;
+  color: #fff;
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.18);
+}
+
+.bottom-nav a:focus-visible {
+  outline: 3px solid rgba(17, 17, 17, 0.3);
+  outline-offset: 3px;
 }
 
 .title-image {

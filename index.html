@@ -8,7 +8,7 @@
 </head>
 <body>
   <main class="main">
-    <section class="vendo-page">
+    <section class="vendo-page" id="vending-machine">
       <img class="title-image" src="images/title.png" alt="Vending Machine">
       <div class="machine">
       <img class="vending-machine" src="images/empty vending machine.png" alt="Vending machine">
@@ -21,8 +21,13 @@
       <img class="shiba" src="images/shiba inu.png" alt="Shiba Inu">
       </div>
     </section>  
-    <iframe class="receipt-frame" src="receipt.html" title="Cash receipt"></iframe>
+    <iframe class="receipt-frame" id="receipt" src="receipt.html" title="Cash receipt"></iframe>
   </main>
+
+  <nav class="bottom-nav" aria-label="Page sections">
+    <a href="#vending-machine">Vending Machine</a>
+    <a href="#receipt">Receipt</a>
+  </nav>
 
   <script src="script.js"></script>
 </body>
