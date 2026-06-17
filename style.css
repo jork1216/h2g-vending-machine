@@ -46,8 +46,8 @@ img {
 .shiba {
   width: 30%;
   position: absolute;
-  left: 72%;
-  bottom: 7%;
+  right: -5%;
+  bottom: -3%;
   z-index: 4;
 }
 
