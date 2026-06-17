@@ -50,8 +50,9 @@ body {
   margin: 0 0 26px;
   text-align: center;
   font-family: "Bebas Neue", Arial, Helvetica, sans-serif;
-  font-size: clamp(30px, 8vw, 46px);
-  font-weight: 600;
+  font-size: clamp(60px, 8vw, 70px);
+  font-weight: 400;
+  letter-spacing: 1px;
   line-height: 1;
 }
 
@@ -148,8 +149,9 @@ body {
   padding-bottom: 11px;
   border-bottom: 2px solid #111;
   font-family: "Bebas Neue", Arial, Helvetica, sans-serif;
-  font-weight: 600;
+  font-weight: 400;
   font-size: clamp(18px, 4.6vw, 25px);
+  letter-spacing: 0.8px;
 }
 
 .receipt-lines {
@@ -191,16 +193,21 @@ body {
   font-size: clamp(14px, 3.5vw, 18px);
 }
 
+.receipt-summary + .receipt-rule {
+  margin-top: 14px;
+}
+
 .receipt-total {
   align-items: baseline;
   margin-top: 18px;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Bebas Neue", Arial, Helvetica, sans-serif;
+  letter-spacing: 0.9px;
   font-weight: 400;
-  font-size: clamp(24px, 6.4vw, 34px);
+  font-size: clamp(30px, 8vw, 44px);
 }
 
 .receipt-total span:last-child {
-  font-size: clamp(28px, 7vw, 38px);
+  font-size: clamp(30px, 8vw, 44px);
 }
 
 .receipt-thanks {
@@ -217,6 +224,7 @@ body {
   font-family: "Bebas Neue", Arial, Helvetica, sans-serif;
   font-size: clamp(22px, 5.5vw, 30px);
   font-weight: 400;
+  letter-spacing: 0.8px;
 }
 
 .receipt-thanks h3::before,

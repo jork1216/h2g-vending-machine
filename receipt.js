@@ -1,10 +1,9 @@
 function sendReceiptHeight() {
+  const receipt = document.querySelector('.receipt');
+
   window.parent.postMessage({
     type: 'receipt-height',
-    height: Math.max(
-      document.body.scrollHeight,
-      document.documentElement.scrollHeight
-    )
+    height: Math.ceil(receipt.getBoundingClientRect().height)
   }, '*');
 }
 
