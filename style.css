@@ -75,9 +75,9 @@ html {
 }
 
 .bottom-nav a:hover {
-  background: #111;
+  background: #814AF0;
   color: #fff;
-  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.18);
+  box-shadow: 0 8px 18px rgba(129, 74, 240, 0.28);
 }
 
 .bottom-nav a:focus-visible {

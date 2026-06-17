@@ -213,7 +213,7 @@ body {
 
 .receipt-thanks p {
   margin: 4px 0 0;
-  font-family: "Playlist Script", "Brush Script MT", "Segoe Script", cursive;
+  font-family: "Segoe Script", cursive;
   font-size: clamp(24px, 6vw, 36px);
   line-height: 1;
 }
