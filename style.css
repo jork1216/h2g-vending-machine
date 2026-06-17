@@ -32,6 +32,36 @@ body {
   max-width: 85%;
 }
 
+.machine::before {
+  content: "";
+  position: absolute;
+  left: 9%;
+  bottom: -2%;
+  width: 78%;
+  height: 8%;
+  border-radius: 50%;
+  background: #000000;
+  opacity: 0.8;
+  filter: blur(10px);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.machine::after {
+  content: "";
+  position: absolute;
+  right: 0%;
+  bottom: -3%;
+  width: 25%;
+  height: 7%;
+  border-radius: 50%;
+  background: #000000;
+  opacity: 0.8;
+  filter: blur(8px);
+  pointer-events: none;
+  z-index: 0;
+}
+
 img {
   max-width: 100%;
   height: auto;
@@ -41,13 +71,15 @@ img {
 .vending-machine {
   width: 100%;
   height: auto;
+  position: relative;
+  z-index: 1;
 }
 
 .shiba {
-  width: 35%;
+  width: 40%;
   position: absolute;
-  right: -12%;
-  bottom: -3%;
+  right: -8%;
+  bottom: -5%;
   z-index: 4;
 }
 
