@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@700;900&display=swap");
+
 body {
   margin: 0;
   min-height: 100vh;
@@ -48,6 +50,8 @@ html {
     #fbfbff;
   border-radius: clamp(24px, 7vw, 38px) clamp(24px, 7vw, 38px) 0 0;
   box-shadow: 0 -18px 42px rgba(101, 84, 148, 0.18);
+  font-family: "Nunito Sans", Arial, sans-serif;
+  font-weight: 700;
   position: relative;
   z-index: 8;
 }
@@ -75,37 +79,11 @@ html {
 }
 
 .basket-icon {
-  width: clamp(24px, 6vw, 31px);
-  height: clamp(19px, 4.8vw, 25px);
+  width: clamp(27px, 7vw, 36px);
+  height: clamp(27px, 7vw, 36px);
   flex: 0 0 auto;
-  position: relative;
   display: inline-block;
-  box-sizing: border-box;
-  margin-top: 6px;
-  border: 3px solid currentColor;
-  border-top: 0;
-  border-radius: 0 0 6px 6px;
-}
-
-.basket-icon::before {
-  content: "";
-  position: absolute;
-  left: 18%;
-  right: 18%;
-  top: -11px;
-  height: 12px;
-  box-sizing: border-box;
-  border: 3px solid currentColor;
-  border-bottom: 0;
-  border-radius: 999px 999px 0 0;
-}
-
-.basket-icon::after {
-  content: "";
-  position: absolute;
-  inset: 6px 27% 5px;
-  border-left: 2px solid currentColor;
-  border-right: 2px solid currentColor;
+  background: url("images/shopping.png") center / contain no-repeat;
 }
 
 .basket-header h2 {
@@ -134,60 +112,35 @@ html {
 }
 
 .basket-clear {
-  min-height: clamp(38px, 10vw, 46px);
+  min-height: clamp(42px, 11vw, 52px);
   flex: 0 0 auto;
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  gap: 8px;
+  gap: 10px;
   box-sizing: border-box;
-  padding: 0 clamp(12px, 3.5vw, 18px);
+  padding: 0 clamp(14px, 4vw, 22px);
   color: #7444da;
   background: #f0e9ff;
   border: 0;
   border-radius: clamp(14px, 4vw, 21px);
   cursor: pointer;
   font: inherit;
-  font-size: clamp(13px, 3.6vw, 16px);
+  font-size: clamp(16px, 4.5vw, 20px);
   font-weight: 900;
   -webkit-tap-highlight-color: transparent;
 }
 
 .trash-icon {
-  width: 0.82em;
-  height: 0.9em;
-  position: relative;
+  width: 1em;
+  height: 1em;
   display: inline-block;
-  box-sizing: border-box;
-  border: 0.12em solid currentColor;
-  border-top: 0;
-  border-radius: 0 0 0.15em 0.15em;
-  color: currentColor;
+  background: url("images/trash.png") center / contain no-repeat;
 }
 
-.trash-icon::before {
-  content: "";
-  position: absolute;
-  left: -0.18em;
-  right: -0.18em;
-  top: -0.28em;
-  height: 0.14em;
-  background: currentColor;
-  border-radius: 999px;
-}
-
-.trash-icon::after {
-  content: "";
-  position: absolute;
-  left: 50%;
-  top: -0.48em;
-  width: 0.36em;
-  height: 0.18em;
-  box-sizing: border-box;
-  border: 0.12em solid currentColor;
-  border-bottom: 0;
-  border-radius: 0.18em 0.18em 0 0;
-  transform: translateX(-50%);
+.basket-clear .trash-icon {
+  width: 1.15em;
+  height: 1.15em;
 }
 
 .basket-list {
@@ -235,7 +188,7 @@ html {
   margin: 0 0 clamp(4px, 1.2vw, 6px);
   color: #30354d;
   font-size: clamp(16px, 4.3vw, 22px);
-  font-weight: 900;
+  font-weight: 700;
   line-height: 1.15;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -246,7 +199,7 @@ html {
   display: block;
   color: #74798f;
   font-size: clamp(14px, 3.8vw, 19px);
-  font-weight: 800;
+  font-weight: 700;
   line-height: 1.1;
 }
 
@@ -264,7 +217,7 @@ html {
   justify-items: center;
   color: #7444da;
   font-size: clamp(19px, 5vw, 26px);
-  font-weight: 900;
+  font-weight: 700;
 }
 
 .quantity-button,
@@ -306,6 +259,10 @@ html {
   line-height: 1;
 }
 
+.basket-total-price {
+  font-weight: 900;
+}
+
 .checkout-button {
   width: 100%;
   min-height: clamp(54px, 14vw, 66px);
@@ -323,7 +280,7 @@ html {
   cursor: pointer;
   font: inherit;
   font-size: clamp(18px, 5vw, 25px);
-  font-weight: 900;
+  font-weight: 700;
   -webkit-tap-highlight-color: transparent;
 }
 
@@ -339,7 +296,7 @@ html {
   color: #74798f;
   text-align: center;
   font-size: clamp(15px, 4vw, 19px);
-  font-weight: 800;
+  font-weight: 700;
 }
 
 .title-image {
