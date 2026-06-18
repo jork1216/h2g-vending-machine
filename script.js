@@ -172,8 +172,8 @@ if (productGrid) {
     const image = document.createElement('img');
     image.className = 'product-image';
     image.alt = '';
-    image.loading = isHighPriorityProduct ? 'eager' : 'lazy';
-    image.fetchPriority = isHighPriorityProduct ? 'high' : 'low';
+    image.loading = 'eager';
+    image.fetchPriority = isHighPriorityProduct ? 'high' : 'auto';
     image.decoding = 'async';
     image.src = item.image;
     product.append(image);
