@@ -6,13 +6,17 @@ const basketEmpty = document.querySelector('.basket-empty');
 const basketFooter = document.querySelector('.basket-footer');
 const basketTotalPrice = document.querySelector('.basket-total-price');
 const checkoutButton = document.querySelector('.checkout-button');
+const receiptLoading = document.querySelector('.receipt-loading');
 const receiptFrame = document.querySelector('.receipt-frame');
 const products = window.products || [];
+
+const RECEIPT_DELAY_MS = 3000;
 
 const formatPeso = (value) => `\u20B1${Number(value).toFixed(2)}`;
 const titleCase = (value) => value.replace(/\b\w/g, (letter) => letter.toUpperCase());
 
 let basketSelections = [];
+let receiptTimerId = null;
 
 const getBasketItems = () => basketSelections
   .map((selection) => {
@@ -59,9 +63,31 @@ const hideReceipt = () => {
   }
 };
 
-const showReceipt = () => {
+const hideReceiptLoading = () => {
+  if (receiptTimerId) {
+    clearTimeout(receiptTimerId);
+    receiptTimerId = null;
+  }
+
+  if (receiptLoading) {
+    receiptLoading.hidden = true;
+  }
+
+  if (checkoutButton) {
+    checkoutButton.disabled = false;
+  }
+};
+
+const finishReceiptGeneration = () => {
   if (!receiptFrame || basketSelections.length === 0) {
+    hideReceiptLoading();
     return;
+  }
+
+  receiptTimerId = null;
+
+  if (receiptLoading) {
+    receiptLoading.hidden = true;
   }
 
   receiptFrame.hidden = false;
@@ -70,6 +96,36 @@ const showReceipt = () => {
   requestAnimationFrame(() => {
     receiptFrame.scrollIntoView({ behavior: 'smooth', block: 'start' });
   });
+
+  if (checkoutButton) {
+    checkoutButton.disabled = false;
+  }
+};
+
+const showReceipt = () => {
+  if (!receiptFrame || basketSelections.length === 0) {
+    return;
+  }
+
+  hideReceipt();
+
+  if (receiptLoading) {
+    receiptLoading.hidden = false;
+
+    requestAnimationFrame(() => {
+      receiptLoading.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    });
+  }
+
+  if (checkoutButton) {
+    checkoutButton.disabled = true;
+  }
+
+  if (receiptTimerId) {
+    clearTimeout(receiptTimerId);
+  }
+
+  receiptTimerId = setTimeout(finishReceiptGeneration, RECEIPT_DELAY_MS);
 };
 
 const addToOrderList = (item) => {
@@ -219,6 +275,10 @@ const renderBasket = () => {
     } else {
       sendReceiptData();
     }
+  }
+
+  if (receiptItems.length === 0) {
+    hideReceiptLoading();
   }
 };
 

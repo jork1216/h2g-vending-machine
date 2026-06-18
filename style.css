@@ -43,6 +43,35 @@ html {
   display: none;
 }
 
+.receipt-loading {
+  margin: 0;
+  padding: clamp(28px, 8vw, 42px) clamp(18px, 5vw, 28px);
+  color: #7444da;
+  background: #fbfbff;
+  display: grid;
+  justify-items: center;
+  gap: 14px;
+  text-align: center;
+  font-family: "Nunito Sans", Arial, sans-serif;
+  font-size: clamp(18px, 5vw, 24px);
+  font-weight: 900;
+}
+
+.receipt-loading[hidden] {
+  display: none;
+}
+
+.receipt-loading::before {
+  content: "";
+  width: clamp(34px, 9vw, 46px);
+  height: clamp(34px, 9vw, 46px);
+  box-sizing: border-box;
+  border: 5px solid #e1d5ff;
+  border-top-color: #7444da;
+  border-radius: 50%;
+  animation: receipt-spin 900ms linear infinite;
+}
+
 .basket-section {
   width: 100%;
   box-sizing: border-box;
@@ -289,10 +318,17 @@ html {
   -webkit-tap-highlight-color: transparent;
 }
 
-.checkout-button span {
+.checkout-arrow {
+  width: 1.35em;
+  height: 1.35em;
   margin-left: auto;
-  font-size: 1.35em;
-  font-weight: 400;
+  display: inline-block;
+  background: url("images/arrow right.png") center / contain no-repeat;
+}
+
+.checkout-button:disabled {
+  cursor: wait;
+  opacity: 0.75;
 }
 
 .basket-empty {
@@ -429,6 +465,12 @@ img {
 .product.falling {
   pointer-events: none;
   animation: fall 800ms ease-in forwards;
+}
+
+@keyframes receipt-spin {
+  to {
+    transform: rotate(360deg);
+  }
 }
 
 @keyframes fall {
