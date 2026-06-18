@@ -1,3 +1,11 @@
+@font-face {
+  font-family: "Receipt Script";
+  src: url("fonts/receipt-script.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
 html,
 body {
   margin: 0;
@@ -213,7 +221,7 @@ body {
 
 .receipt-thanks p {
   margin: 4px 0 0;
-  font-family: "Segoe Script", cursive;
+  font-family: "Receipt Script", "Segoe Script", cursive;
   font-size: clamp(24px, 6vw, 36px);
   line-height: 1;
 }

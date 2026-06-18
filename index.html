@@ -21,14 +21,36 @@
       <img class="shiba" src="images/shiba inu.png" alt="Shiba Inu">
       </div>
     </section>  
+    <section class="basket-section" aria-labelledby="basket-title">
+      <div class="basket-panel">
+        <header class="basket-header">
+          <div class="basket-heading">
+            <span class="basket-icon" aria-hidden="true"></span>
+            <h2 id="basket-title">Your Picks <span class="basket-count">0</span></h2>
+          </div>
+          <button class="basket-clear" type="button">
+            <span class="trash-icon" aria-hidden="true"></span>
+            Clear All
+          </button>
+        </header>
+        <div class="basket-list" aria-label="Basket items"></div>
+        <p class="basket-empty" hidden>Your basket is empty.</p>
+        <footer class="basket-footer">
+          <div class="basket-total">
+            <span>Total</span>
+            <strong class="basket-total-price">&#8369;0.00</strong>
+          </div>
+          <button class="checkout-button" type="button">
+            Proceed to Checkout
+            <span aria-hidden="true">&rarr;</span>
+          </button>
+        </footer>
+      </div>
+    </section>
     <iframe class="receipt-frame" id="receipt" src="receipt.html" title="Cash receipt"></iframe>
   </main>
 
-  <nav class="bottom-nav" aria-label="Page sections">
-    <a href="#vending-machine">Vending Machine</a>
-    <a href="#receipt">Receipt</a>
-  </nav>
-
+  <script src="products.js"></script>
   <script src="script.js"></script>
 </body>
 </html>
