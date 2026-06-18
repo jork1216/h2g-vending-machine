@@ -79,8 +79,8 @@ html {
 }
 
 .basket-icon {
-  width: clamp(27px, 7vw, 36px);
-  height: clamp(27px, 7vw, 36px);
+  width: clamp(31px, 8vw, 42px);
+  height: clamp(31px, 8vw, 42px);
   flex: 0 0 auto;
   display: inline-block;
   background: url("images/shopping.png") center / contain no-repeat;
@@ -132,15 +132,15 @@ html {
 }
 
 .trash-icon {
-  width: 1em;
-  height: 1em;
+  width: 1.1em;
+  height: 1.1em;
   display: inline-block;
   background: url("images/trash.png") center / contain no-repeat;
 }
 
 .basket-clear .trash-icon {
-  width: 1.15em;
-  height: 1.15em;
+  width: 1.4em;
+  height: 1.4em;
 }
 
 .basket-list {
