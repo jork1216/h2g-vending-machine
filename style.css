@@ -36,7 +36,7 @@ html {
   height: 1320px;
   border: 0;
   display: block;
-  background: #fff;
+  background: #fbfbff;
 }
 
 .receipt-frame[hidden] {
@@ -46,7 +46,7 @@ html {
 .receipt-loading {
   margin: 0;
   padding: clamp(28px, 8vw, 42px) clamp(18px, 5vw, 28px);
-  color: #7444da;
+  color: #9a6af3;
   background: #fbfbff;
   display: grid;
   justify-items: center;
@@ -78,10 +78,8 @@ html {
   margin-top: -2px;
   padding: clamp(18px, 5vw, 28px) clamp(18px, 5vw, 28px) clamp(24px, 7vw, 38px);
   color: #30354d;
-  background:
-    radial-gradient(circle at 50% -20%, rgba(138, 98, 250, 0.14), transparent 38%),
-    #fbfbff;
-  border-radius: clamp(24px, 7vw, 38px) clamp(24px, 7vw, 38px) 0 0;
+  background: #fbfbff;
+  border-radius: 0;
   box-shadow: 0 -18px 42px rgba(101, 84, 148, 0.18);
   font-family: "Nunito Sans", Arial, sans-serif;
   font-weight: 700;
@@ -205,12 +203,15 @@ html {
   place-items: center;
   border-radius: 16px;
   background: transparent;
+  overflow: hidden;
 }
 
 .basket-image {
+  width: auto;
+  height: 100%;
   max-width: 100%;
-  max-height: 100%;
   object-fit: contain;
+  object-position: center;
   filter: drop-shadow(0 7px 8px rgba(44, 48, 73, 0.18));
 }
 
@@ -307,10 +308,10 @@ html {
   box-sizing: border-box;
   padding: 0 clamp(18px, 5vw, 28px);
   color: #fff;
-  background: #7444da;
+  background: #16a34a;
   border: 0;
   border-radius: clamp(16px, 4.5vw, 22px);
-  box-shadow: 0 12px 22px rgba(116, 68, 218, 0.28);
+  box-shadow: 0 12px 22px rgba(22, 163, 74, 0.28);
   cursor: pointer;
   font: inherit;
   font-size: clamp(18px, 5vw, 25px);
