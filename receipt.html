@@ -32,7 +32,7 @@
           </div>
           <div>
             <dt>Date:</dt>
-            <dd>MM/DD/YYYY</dd>
+            <dd class="receipt-date">MM/DD/YYYY</dd>
           </div>
           <div>
             <dt>Manager:</dt>
@@ -49,24 +49,20 @@
           <span>PRICE</span>
         </div>
 
-        <ul class="receipt-lines">
-          <li><span>Lorem ipsum</span><span>$4.25</span></li>
-          <li><span>Ipsum dolor sit</span><span>$1.10</span></li>
-        </ul>
+        <ul class="receipt-lines" aria-live="polite"></ul>
       </div>
 
       <div class="receipt-dashed-rule"></div>
 
       <div class="receipt-summary">
-        <div><span>SUBTOTAL</span><span>$109.44</span></div>
-        <div><span>TAX (15%)</span><span>$15.55</span></div>
+        <div><span>SUBTOTAL</span><span class="receipt-subtotal-price">&#8369;0.00</span></div>
       </div>
 
       <div class="receipt-rule"></div>
 
       <div class="receipt-total">
         <span>TOTAL</span>
-        <span>$124.99</span>
+        <span class="receipt-total-price">&#8369;0.00</span>
       </div>
 
       <div class="receipt-thanks">

@@ -39,6 +39,10 @@ html {
   background: #fff;
 }
 
+.receipt-frame[hidden] {
+  display: none;
+}
+
 .basket-section {
   width: 100%;
   box-sizing: border-box;
