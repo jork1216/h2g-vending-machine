@@ -18,6 +18,8 @@ html {
   max-width: 550px;
   min-height: 100vh;
   box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
 }
 
 .vendo-page {
@@ -74,6 +76,7 @@ html {
 
 .basket-section {
   width: 100%;
+  flex: 1 0 auto;
   box-sizing: border-box;
   margin-top: -2px;
   padding: clamp(18px, 5vw, 28px) clamp(18px, 5vw, 28px) clamp(24px, 7vw, 38px);
