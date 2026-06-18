@@ -10,6 +10,20 @@ const products = window.products || [];
 const formatPeso = (value) => `\u20B1${Number(value).toFixed(2)}`;
 const titleCase = (value) => value.replace(/\b\w/g, (letter) => letter.toUpperCase());
 
+let basketSelections = [];
+
+const addToOrderList = (item) => {
+  const selection = basketSelections.find((basketItem) => basketItem.name === item.name);
+
+  if (selection) {
+    selection.quantity += 1;
+  } else {
+    basketSelections.push({ name: item.name, quantity: 1 });
+  }
+
+  renderBasket();
+};
+
 if (productGrid) {
   for (let i = 0; i < products.length; i += 1) {
     const item = products[i];
@@ -25,18 +39,19 @@ if (productGrid) {
     product.append(image);
 
     product.addEventListener('click', () => {
+      addToOrderList(item);
       product.classList.add('falling');
+      product.disabled = true;
+
+      product.addEventListener('animationend', () => {
+        product.classList.remove('falling');
+        product.disabled = false;
+      }, { once: true });
     });
 
     productGrid.append(product);
   }
 }
-
-let basketSelections = [
-  { name: 'Piattos', quantity: 1 },
-  { name: 'Coke', quantity: 1 },
-  { name: 'Dove soap', quantity: 1 }
-];
 
 const renderBasket = () => {
   if (!basketList) {
@@ -82,7 +97,7 @@ const renderBasket = () => {
 
     const quantity = document.createElement('div');
     quantity.className = 'basket-quantity';
-    quantity.setAttribute('aria-label', `${selection.quantity} in basket`);
+    quantity.setAttribute('aria-label', `${selection.quantity} in order list`);
 
     const minus = document.createElement('button');
     minus.className = 'quantity-button';
