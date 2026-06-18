@@ -17,6 +17,7 @@ const titleCase = (value) => value.replace(/\b\w/g, (letter) => letter.toUpperCa
 
 let basketSelections = [];
 let receiptTimerId = null;
+let shouldScrollToReceipt = false;
 
 const getBasketItems = () => basketSelections
   .map((selection) => {
@@ -58,9 +59,19 @@ const sendReceiptData = () => {
 };
 
 const hideReceipt = () => {
+  shouldScrollToReceipt = false;
+
   if (receiptFrame) {
     receiptFrame.hidden = true;
   }
+};
+
+const scrollToReceipt = () => {
+  if (!receiptFrame || receiptFrame.hidden) {
+    return;
+  }
+
+  receiptFrame.scrollIntoView({ behavior: 'smooth', block: 'start' });
 };
 
 const hideReceiptLoading = () => {
@@ -85,6 +96,7 @@ const finishReceiptGeneration = () => {
   }
 
   receiptTimerId = null;
+  shouldScrollToReceipt = true;
 
   if (receiptLoading) {
     receiptLoading.hidden = true;
@@ -94,8 +106,15 @@ const finishReceiptGeneration = () => {
   sendReceiptData();
 
   requestAnimationFrame(() => {
-    receiptFrame.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    requestAnimationFrame(scrollToReceipt);
   });
+
+  setTimeout(() => {
+    if (shouldScrollToReceipt) {
+      shouldScrollToReceipt = false;
+      scrollToReceipt();
+    }
+  }, 100);
 
   if (checkoutButton) {
     checkoutButton.disabled = false;
@@ -346,5 +365,10 @@ window.addEventListener('message', (event) => {
 
   if (receiptFrame) {
     receiptFrame.style.height = `${event.data.height}px`;
+
+    if (shouldScrollToReceipt) {
+      shouldScrollToReceipt = false;
+      requestAnimationFrame(scrollToReceipt);
+    }
   }
 });
