@@ -132,10 +132,11 @@ html {
 }
 
 .trash-icon {
-  width: 1.1em;
-  height: 1.1em;
+  width: 1.3em;
+  height: 1.3em;
   display: inline-block;
   background: url("images/trash.png") center / contain no-repeat;
+  filter: brightness(0.65);
 }
 
 .basket-clear .trash-icon {
