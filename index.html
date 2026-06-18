@@ -4,21 +4,24 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Vending Machine</title>
+  <link rel="preload" as="image" href="images/park.png" fetchpriority="high">
+  <link rel="preload" as="image" href="images/title.png" fetchpriority="high">
+  <link rel="preload" as="image" href="images/empty vending machine.png" fetchpriority="high">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <main class="main">
     <section class="vendo-page" id="vending-machine">
-      <img class="title-image" src="images/title.png" alt="Vending Machine">
+      <img class="title-image" src="images/title.png" alt="Vending Machine" loading="eager" fetchpriority="high" decoding="async">
       <div class="machine">
-      <img class="vending-machine" src="images/empty vending machine.png" alt="Vending machine">
+      <img class="vending-machine" src="images/empty vending machine.png" alt="Vending machine" loading="eager" fetchpriority="high" decoding="async">
       <div class="shelves" aria-hidden="true">
-        <img class="shelf" src="images/shelf.png" alt="">
-        <img class="shelf" src="images/shelf.png" alt="">
-        <img class="shelf" src="images/shelf.png" alt="">
+        <img class="shelf" src="images/shelf.png" alt="" loading="eager" fetchpriority="auto" decoding="async">
+        <img class="shelf" src="images/shelf.png" alt="" loading="eager" fetchpriority="auto" decoding="async">
+        <img class="shelf" src="images/shelf.png" alt="" loading="eager" fetchpriority="auto" decoding="async">
       </div>
       <div class="product-grid" aria-label="Product grid"></div>
-      <img class="shiba" src="images/shiba inu.png" alt="Shiba Inu">
+      <img class="shiba" src="images/shiba inu.png" alt="Shiba Inu" loading="eager" fetchpriority="auto" decoding="async">
       </div>
     </section>  
     <section class="basket-section" aria-labelledby="basket-title">

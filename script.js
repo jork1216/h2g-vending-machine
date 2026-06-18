@@ -11,6 +11,7 @@ const receiptFrame = document.querySelector('.receipt-frame');
 const products = window.products || [];
 
 const RECEIPT_DELAY_MS = 3000;
+const HIGH_PRIORITY_PRODUCT_COUNT = 4;
 
 const formatPeso = (value) => `\u20B1${Number(value).toFixed(2)}`;
 const titleCase = (value) => value.replace(/\b\w/g, (letter) => letter.toUpperCase());
@@ -162,6 +163,7 @@ const addToOrderList = (item) => {
 if (productGrid) {
   for (let i = 0; i < products.length; i += 1) {
     const item = products[i];
+    const isHighPriorityProduct = i < HIGH_PRIORITY_PRODUCT_COUNT;
     const product = document.createElement('button');
     product.className = 'product';
     product.type = 'button';
@@ -169,8 +171,11 @@ if (productGrid) {
 
     const image = document.createElement('img');
     image.className = 'product-image';
-    image.src = item.image;
     image.alt = '';
+    image.loading = isHighPriorityProduct ? 'eager' : 'lazy';
+    image.fetchPriority = isHighPriorityProduct ? 'high' : 'low';
+    image.decoding = 'async';
+    image.src = item.image;
     product.append(image);
 
     product.addEventListener('click', () => {
@@ -211,8 +216,11 @@ const renderBasket = () => {
 
     const image = document.createElement('img');
     image.className = 'basket-image';
-    image.src = item.image;
     image.alt = item.name;
+    image.loading = 'eager';
+    image.fetchPriority = 'auto';
+    image.decoding = 'async';
+    image.src = item.image;
     imageWrap.append(image);
 
     const details = document.createElement('div');
