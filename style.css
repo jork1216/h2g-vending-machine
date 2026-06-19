@@ -430,17 +430,23 @@ img {
   width: 100%;
 }
 
-.product-grid {
+.product-window {
   position: absolute;
   top: 18.5%;
   left: 41.5%;
   width: 62%;
+  height: 53%;
+  overflow: hidden;
+  transform: translateX(-50%);
+  z-index: 2;
+}
+
+.product-grid {
+  width: 100%;
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
   row-gap: 25px;
   column-gap: 15px;
-  transform: translateX(-50%);
-  z-index: 2;
 }
 
 .product {
@@ -471,7 +477,7 @@ img {
 
 .product.falling {
   pointer-events: none;
-  animation: fall 800ms ease-in forwards;
+  animation: fall 1300ms forwards;
 }
 
 @keyframes receipt-spin {
@@ -481,8 +487,17 @@ img {
 }
 
 @keyframes fall {
-  to {
-    transform: translateY(360px) rotate(25deg);
-    opacity: 0;
+  0% {
+    transform: scale(1);
+    animation-timing-function: ease-out;
+  }
+
+  38.5% {
+    transform: scale(1.06);
+    animation-timing-function: ease-in;
+  }
+
+  100% {
+    transform: translateY(360px) rotate(25deg) scale(1);
   }
 }
