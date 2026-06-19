@@ -9,6 +9,7 @@ const checkoutButton = document.querySelector('.checkout-button');
 const receiptLoading = document.querySelector('.receipt-loading');
 const receiptFrame = document.querySelector('.receipt-frame');
 const products = window.products || [];
+const vendoSound = new Audio('audio/Vendo Sound Effect.mp3');
 
 const RECEIPT_DELAY_MS = 3000;
 const formatPeso = (value) => `\u20B1${Number(value).toFixed(2)}`;
@@ -17,6 +18,13 @@ const titleCase = (value) => value.replace(/\b\w/g, (letter) => letter.toUpperCa
 let basketSelections = [];
 let receiptTimerId = null;
 let shouldScrollToReceipt = false;
+
+vendoSound.preload = 'auto';
+
+const playVendoSound = () => {
+  vendoSound.currentTime = 0;
+  vendoSound.play().catch(() => {});
+};
 
 const getBasketItems = () => basketSelections
   .map((selection) => {
@@ -173,6 +181,7 @@ if (productGrid) {
     product.append(image);
 
     product.addEventListener('click', () => {
+      playVendoSound();
       addToOrderList(item);
       product.classList.add('falling');
       product.disabled = true;

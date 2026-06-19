@@ -177,7 +177,6 @@ html {
 }
 
 .basket-clear .trash-icon {
-  width: 1.4em;
   height: 1.4em;
   filter: brightness(0) invert(1);
 }
