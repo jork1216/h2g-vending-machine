@@ -169,9 +169,6 @@ if (productGrid) {
     const image = document.createElement('img');
     image.className = 'product-image';
     image.alt = '';
-    image.loading = 'eager';
-    image.fetchPriority = 'high';
-    image.decoding = 'async';
     image.src = item.image;
     product.append(image);
 
@@ -214,9 +211,6 @@ const renderBasket = () => {
     const image = document.createElement('img');
     image.className = 'basket-image';
     image.alt = item.name;
-    image.loading = 'eager';
-    image.fetchPriority = 'auto';
-    image.decoding = 'async';
     image.src = item.image;
     imageWrap.append(image);
 
