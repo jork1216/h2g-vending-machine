@@ -421,7 +421,7 @@ img {
   opacity: 0;
   transform: translateY(10px) scale(0.78);
   transform-origin: 68% 100%;
-  animation: dialog-pop 650ms cubic-bezier(0.16, 1, 0.3, 1) 2s forwards;
+  animation: dialog-pop 350ms cubic-bezier(0.16, 1, 0.3, 1) 4s forwards;
   pointer-events: none;
 }
 
