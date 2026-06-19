@@ -10,6 +10,7 @@ const receiptLoading = document.querySelector('.receipt-loading');
 const receiptFrame = document.querySelector('.receipt-frame');
 const products = window.products || [];
 const vendoSound = new Audio('audio/Vendo Sound Effect.mp3');
+const receiptSound = new Audio('audio/receipt sound.mp3');
 
 const RECEIPT_DELAY_MS = 3000;
 const formatPeso = (value) => `\u20B1${Number(value).toFixed(2)}`;
@@ -20,10 +21,16 @@ let receiptTimerId = null;
 let shouldScrollToReceipt = false;
 
 vendoSound.preload = 'auto';
+receiptSound.preload = 'auto';
 
 const playVendoSound = () => {
   vendoSound.currentTime = 0;
   vendoSound.play().catch(() => {});
+};
+
+const playReceiptSound = () => {
+  receiptSound.currentTime = 0;
+  receiptSound.play().catch(() => {});
 };
 
 const getBasketItems = () => basketSelections
@@ -110,6 +117,7 @@ const finishReceiptGeneration = () => {
   }
 
   receiptFrame.hidden = false;
+  playReceiptSound();
   sendReceiptData();
 
   requestAnimationFrame(() => {
