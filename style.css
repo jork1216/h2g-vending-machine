@@ -213,12 +213,11 @@ html {
 }
 
 .basket-image {
-  width: auto;
+  display: block;
+  width: 100%;
   height: 100%;
-  max-width: 100%;
   object-fit: contain;
   object-position: center;
-  filter: drop-shadow(0 7px 8px rgba(44, 48, 73, 0.18));
 }
 
 .basket-details {
@@ -412,6 +411,20 @@ img {
   z-index: 4;
 }
 
+.shiba-dialog {
+  width: 30%;
+  position: absolute;
+  right: -3.5%;
+  bottom: 23%;
+  z-index: 5;
+  visibility: hidden;
+  opacity: 0;
+  transform: translateY(10px) scale(0.78);
+  transform-origin: 68% 100%;
+  animation: dialog-pop 650ms cubic-bezier(0.16, 1, 0.3, 1) 2s forwards;
+  pointer-events: none;
+}
+
 .shelves {
   opacity: 1;
   position: absolute;
@@ -486,6 +499,37 @@ img {
   }
 }
 
+@keyframes dialog-pop {
+  0% {
+    visibility: visible;
+    opacity: 0;
+    transform: translateY(10px) scale(0.78);
+  }
+
+  60% {
+    opacity: 1;
+    transform: translateY(-4px) scale(1.06);
+  }
+
+  82% {
+    transform: translateY(1px) scale(0.98);
+  }
+
+  100% {
+    visibility: visible;
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes dialog-fade-in {
+  to {
+    visibility: visible;
+    opacity: 1;
+    transform: none;
+  }
+}
+
 @keyframes fall {
   0% {
     transform: scale(1);
@@ -499,5 +543,11 @@ img {
 
   100% {
     transform: translateY(360px) rotate(25deg) scale(1);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .shiba-dialog {
+    animation: dialog-fade-in 1ms linear 2s forwards;
   }
 }
