@@ -18,7 +18,7 @@ window.products = [
     description: 'Toothpaste for everyday cavity protection.'
   },
   {
-    name: 'Egg (Meedium)',
+    name: 'Egg (Medium)',
     image: 'products/egg.png',
     price: 12,
     description: 'Small fresh egg for a quick meal.'
