@@ -1,9 +1,9 @@
 window.products = [
   {
-    name: 'Shampoo',
+    name: 'Dove Shampoo Sachet',
     image: 'products/shampoo.png',
-    price: 89,
-    description: 'Daily care shampoo for clean, fresh hair.'
+    price: 12,
+    description: 'Dove shampoo sachet for daily hair care.'
   },
   {
     name: 'Safeguard Soap',
@@ -18,10 +18,10 @@ window.products = [
     description: 'Toothpaste for everyday cavity protection.'
   },
   {
-    name: 'Egg',
+    name: 'Egg (Meedium)',
     image: 'products/egg.png',
     price: 12,
-    description: 'Single fresh egg for a quick meal.'
+    description: 'Small fresh egg for a quick meal.'
   },
   {
     name: 'Oil',
@@ -30,16 +30,16 @@ window.products = [
     description: 'Small bottle of cooking oil for pantry use.'
   },
   {
-    name: 'Soy Sauce',
+    name: 'Datu Puti Soy Sauce',
     image: 'products/soy sauce.png',
-    price: 18,
-    description: 'Small bottle of soy sauce for everyday cooking.'
+    price: 15,
+    description: 'Datu Puti soy sauce for everyday cooking.'
   },
   {
-    name: 'Vinegar',
+    name: 'Datu Puti Vinegar',
     image: 'products/vinegar.png',
-    price: 18,
-    description: 'Small bottle of vinegar for pantry use.'
+    price: 15,
+    description: 'Datu Puti vinegar for pantry use.'
   },
 
   {
@@ -61,10 +61,10 @@ window.products = [
     description: 'Chilled cola drink in a single bottle.'
   },
   {
-    name: 'Kopiko',
+    name: 'Great Taste White Coffee',
     image: 'products/kopiko.png',
-    price: 12,
-    description: 'Coffee candy with a rich roasted flavor.'
+    price: 15,
+    description: 'Great Taste white coffee sachet.'
   },
 
   {
