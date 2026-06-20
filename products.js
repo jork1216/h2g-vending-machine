@@ -1,34 +1,21 @@
 window.products = [
   {
-    name: 'Toilet roll',
-    image: 'products/toilet roll.png',
-    price: 18,
-    description: 'Soft two-ply bathroom tissue roll.'
-  },
-  {
     name: 'Shampoo',
     image: 'products/shampoo.png',
     price: 89,
     description: 'Daily care shampoo for clean, fresh hair.'
   },
   {
-    name: 'Dove soap',
-    image: 'products/dove soap.png',
-    price: 65,
-    description: 'Moisturizing beauty bar for gentle cleansing.'
+    name: 'Safeguard Soap',
+    image: 'products/safeguard soap.png',
+    price: 35,
+    description: 'Safeguard soap bar for everyday cleansing.'
   },
   {
     name: 'Colgate',
     image: 'products/colgate.png',
     price: 72,
     description: 'Toothpaste for everyday cavity protection.'
-  },
-
-  {
-    name: 'Bundle',
-    image: 'products/bundle.png',
-    price: 199,
-    description: 'Assorted essentials packed together for quick shopping.'
   },
   {
     name: 'Egg',
@@ -42,6 +29,18 @@ window.products = [
     price: 75,
     description: 'Small bottle of cooking oil for pantry use.'
   },
+  {
+    name: 'Soy Sauce',
+    image: 'products/soy sauce.png',
+    price: 18,
+    description: 'Small bottle of soy sauce for everyday cooking.'
+  },
+  {
+    name: 'Vinegar',
+    image: 'products/vinegar.png',
+    price: 18,
+    description: 'Small bottle of vinegar for pantry use.'
+  },
 
   {
     name: 'Piattos',
@@ -50,15 +49,15 @@ window.products = [
     description: 'Crunchy potato crisps for a quick snack.'
   },
   {
-    name: 'Water',
+    name: 'Water Gallon',
     image: 'products/water.png',
-    price: 20,
-    description: 'Bottled drinking water for refreshment.'
+    price: 70,
+    description: 'Gallon of drinking water for home refill.'
   },
   {
     name: 'Coke',
     image: 'products/coke.png',
-    price: 35,
+    price: 20,
     description: 'Chilled cola drink in a single bottle.'
   },
   {
