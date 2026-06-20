@@ -286,7 +286,7 @@ body {
   cursor: pointer;
   text-align: left;
   font-family: Arial, Helvetica, sans-serif;
-  font-size: clamp(11px, 2.9vw, 15px);
+  font-size: clamp(12px, 3.2vw, 17px);
   font-weight: 700;
   line-height: 1;
   letter-spacing: 0.2px;
