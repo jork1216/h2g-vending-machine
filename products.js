@@ -66,7 +66,6 @@ window.products = [
     price: 15,
     description: 'Great Taste white coffee sachet.'
   },
-
   {
     name: 'Maxglow (350ml)',
     image: 'products/maxglow.png',
