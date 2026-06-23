@@ -2,20 +2,20 @@ window.products = [
   {
     name: 'Dove Shampoo Sachet',
     image: 'products/shampoo.png',
-    price: 12,
+    price: 15,
     description: 'Dove shampoo sachet for daily hair care.'
   },
   {
-    name: 'Safeguard Soap',
+    name: 'Safeguard',
     image: 'products/safeguard soap.png',
-    price: 35,
+    price: 30,
     description: 'Safeguard soap bar for everyday cleansing.'
   },
   {
-    name: 'Colgate',
+    name: 'Colgate Toothpaste + Toothbrush',
     image: 'products/colgate.png',
-    price: 72,
-    description: 'Toothpaste for everyday cavity protection.'
+    price: 45,
+    description: 'Toothpaste and toothbrush set for everyday care.'
   },
   {
     name: 'Egg (Medium)',
@@ -24,10 +24,10 @@ window.products = [
     description: 'Small fresh egg for a quick meal.'
   },
   {
-    name: 'Oil',
+    name: 'Mantika',
     image: 'products/oil.png',
-    price: 75,
-    description: 'Small bottle of cooking oil for pantry use.'
+    price: 65,
+    description: 'Common cooking oil sold in neighborhood stores.'
   },
   {
     name: 'Datu Puti Soy Sauce',
@@ -43,9 +43,9 @@ window.products = [
   },
 
   {
-    name: 'Piattos',
+    name: 'Piattos (Smallest)',
     image: 'products/piattos.png',
-    price: 18,
+    price: 23,
     description: 'Crunchy potato crisps for a quick snack.'
   },
   {
@@ -55,7 +55,7 @@ window.products = [
     description: 'Gallon of drinking water for home refill.'
   },
   {
-    name: 'Coke',
+    name: 'Coke na maliit',
     image: 'products/coke.png',
     price: 20,
     description: 'Chilled cola drink in a single bottle.'
@@ -68,9 +68,9 @@ window.products = [
   },
 
   {
-    name: 'Maxglow',
+    name: 'Maxglow + Sponge',
     image: 'products/maxglow.png',
-    price: 95,
-    description: 'Personal care item for a quick daily refresh.'
+    price: 55,
+    description: 'Small Maxglow pack with sponge.'
   }
 ];
