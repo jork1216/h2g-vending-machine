@@ -43,7 +43,7 @@ window.products = [
   },
 
   {
-    name: 'Piattos (Smallest)',
+    name: 'Piattos (Small)',
     image: 'products/piattos.png',
     price: 23,
     description: 'Crunchy potato crisps for a quick snack.'
