@@ -68,7 +68,7 @@ window.products = [
   },
 
   {
-    name: 'Maxglow + Sponge',
+    name: 'Maxglow (350ml)',
     image: 'products/maxglow.png',
     price: 55,
     description: 'Small Maxglow pack with sponge.'
