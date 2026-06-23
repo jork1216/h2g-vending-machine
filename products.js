@@ -55,7 +55,7 @@ window.products = [
     description: 'Gallon of drinking water for home refill.'
   },
   {
-    name: 'Coke na maliit',
+    name: 'Coke',
     image: 'products/coke.png',
     price: 20,
     description: 'Chilled cola drink in a single bottle.'
