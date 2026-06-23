@@ -6,7 +6,7 @@ window.products = [
     description: 'Dove shampoo sachet for daily hair care.'
   },
   {
-    name: 'Safeguard',
+    name: 'Safeguard Soap',
     image: 'products/safeguard soap.png',
     price: 30,
     description: 'Safeguard soap bar for everyday cleansing.'
