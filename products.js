@@ -12,7 +12,7 @@ window.products = [
     description: 'Safeguard soap bar for everyday cleansing.'
   },
   {
-    name: 'Colgate Toothpaste + Toothbrush',
+    name: 'Colgate Toothpaste',
     image: 'products/colgate.png',
     price: 45,
     description: 'Toothpaste and toothbrush set for everyday care.'
